@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC 
+    "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" 
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+	<settings 
+		lazyLoadingEnabled="false" 
+		enhancementEnabled="false"
+		cacheModelsEnabled="true" />
+	
+	
+	
+	<typeHandler javaType="br.com.capela.model.Dinheiro"
+		callback="br.com.capela.infra.model.typehandler.DinheiroTypeHandler"/>
+	
+	<sqlMap resource="br/com/capela/model/financeiro/venda/VendaMapper.xml" />
+	<sqlMap resource="br/com/capela/model/financeiro/movimentacao/ContaMapper.xml"/>
+	<sqlMap resource="br/com/capela/model/financeiro/movimentacao/MovimentoMapper.xml"/>
+	
+	
+</sqlMapConfig>

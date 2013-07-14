@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="CaixaMapper">
+	<typeAlias alias="intervaloDeDatas" type="org.joda.time.Interval" />
+	<typeAlias alias="venda" type="br.com.capela.model.financeiro.venda.Venda" />
+	
+	<resultMap id="venda" class="venda" >
+		<result property="data" column="DATACAIXA" />
+		<result property="produto" column="NOMEPRODUTO" />
+		<result property="valorTotal" column="VALORTOTAL" />
+	</resultMap>	
+	
+	<select id="CaixaMapper.vendasNoPeriodo" resultMap="venda" parameterClass="map">
+		select 
+			DATACAIXA, 
+			NOMEPRODUTO,
+			VALORTOTAL	 
+		from DBCAIXA 
+		where 
+			DATACAIXA between #dataInicial# and #dataFinal# 
+		order by DATACAIXA
+	</select>
+	
+</sqlMap>

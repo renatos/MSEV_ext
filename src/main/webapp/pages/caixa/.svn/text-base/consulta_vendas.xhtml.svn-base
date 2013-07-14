@@ -1,0 +1,71 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="../../template/ui.xhtml">
+
+	<ui:define name="content">
+
+		<div class="entry">
+			
+			<div class="container-fluid">
+				
+				<h:form id="form" styleClass="form-inline" prependId="false">
+					<div class="row-fluid show-grid">
+					    <div class="span12">
+					    	<p:outputLabel value="Data inicial" for="dataInicial"/>	
+							<p:calendar id="dataInicial" value="#{vendasController.dataInicial}"  styleClass="input-medium search-query" />  
+							<p:outputLabel value="Data final" for="dataFinal"/>	
+							<p:calendar id="dataFinal" value="#{vendasController.dataFinal}" styleClass="input-medium search-query"/>  
+							
+							<p:commandLink styleClass="btn btn-primary" value="Consultar" 
+									update="tableVendasPorDia tableVendas valorTotalDasVendas" id="consulta" actionListener="#{vendasController.consulta}" />  
+							
+							<H1>Total de Vendas <h:outputText id="valorTotalDasVendas" value="#{vendasController.valorTotalDasVendas}"/> </H1>		
+									
+					    	<div class="row-fluid">
+						    	<div class="span6">
+						    		<p:dataTable id="tableVendasPorDia" styleClass="table table-striped table-condensed" var="venda" 
+										value="#{vendasController.vendasPorDia}" >
+										<p:column headerText="Data" sortBy="#{venda.data}">
+											<h:outputText value="#{venda.data}">
+												<f:convertDateTime pattern="dd/MM/yyyy"/>
+											</h:outputText>
+										</p:column>
+					
+										<p:column headerText="Valor Total" sortBy="#{venda.valorTotal}">
+											<h:outputText value="#{venda.valorTotal}" />
+										</p:column>
+										
+									</p:dataTable>
+						    	</div>
+						    	<div class="span6">
+						    		<p:dataTable id="tableVendas" styleClass="table table-striped table-condensed" var="venda" 
+										value="#{vendasController.vendas}" >
+										<p:column headerText="Data" sortBy="#{venda.data}">
+											<h:outputText value="#{venda.data}">
+												<f:convertDateTime pattern="dd/MM/yyyy"/>
+											</h:outputText>
+										</p:column>
+					
+										<p:column headerText="Produto">
+											<h:outputText value="#{venda.produto}" />
+										</p:column>
+					
+										<p:column headerText="Valor Total" sortBy="#{venda.valorTotal}">
+											<h:outputText value="#{venda.valorTotal}" />
+										</p:column>
+										
+									</p:dataTable>
+								</div>
+							</div>
+				  		</div>
+				  </div>
+				</h:form> 
+						
+			</div>
+		</div>
+			
+			
+	</ui:define>
+</ui:composition>

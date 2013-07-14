@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/23/trunk/MSEV_ext/src/main/webapp/WEB-INF
+END
+servlet-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/4/trunk/MSEV_ext/src/main/webapp/WEB-INF/servlet-context.xml
+END
+faces-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/18/trunk/MSEV_ext/src/main/webapp/WEB-INF/faces-config.xml
+END
+sql-map-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/18/trunk/MSEV_ext/src/main/webapp/WEB-INF/sql-map-config.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/23/trunk/MSEV_ext/src/main/webapp/WEB-INF/web.xml
+END

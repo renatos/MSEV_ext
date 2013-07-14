@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ContaMapper">
+	<cacheModel type="LRU" id="contaCache">
+		<flushInterval hours="24"/>
+	</cacheModel>
+	<typeAlias alias="conta" type="br.com.capela.model.financeiro.movimentacao.Conta" />
+	
+	<resultMap id="conta" class="conta" >
+		<result property="codigo" column="CODIGOBANCO" />
+		<result property="descricao" column="NOMEBANCO" />
+	</resultMap>	
+	
+	<select id="ContaMapper.findById" resultMap="conta" parameterClass="int" cacheModel="contaCache">
+		select 
+			CODIGOBANCO, 
+			NOMEBANCO
+		from DBBANCO 
+		where 
+			CODIGOBANCO = #value#  
+	</select>
+	
+</sqlMap>
