@@ -8,6 +8,8 @@ import org.joda.time.LocalDate;
 
 import br.com.capela.model.Dinheiro;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 
@@ -22,6 +24,10 @@ public class RelatorioDeMovimentacao {
 
 	public RelatorioDeMovimentacao(final AnaliseDaMovimentacaoFinanceira movimentacaoFinanceiraService) {
 		this.movimentacaoFinanceiraService = movimentacaoFinanceiraService;
+		this.movimentacao = Lists.newArrayList();
+		this.totalizacaoPorContas = Lists.newArrayList();
+		this.movimentacaoPorConta = ArrayListMultimap.create();
+		this.movimentacaoPorContaEProduto = ArrayListMultimap.create();
 	}
 
 	public void consulta(final Date dataInicial, final Date dataFinal) {
