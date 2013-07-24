@@ -321,4 +321,3 @@ where
     DATACADASTRO between '2012.04.18' and '2012.08.18'    
 group by descricao
 --order by DATACADASTRO  
---teste
