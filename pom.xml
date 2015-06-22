@@ -380,7 +380,7 @@
 			</activation>
 			<properties>
 				<jdbc.driverClassName>com.p6spy.engine.spy.P6SpyDriver</jdbc.driverClassName>
-				<jdbc.url>jdbc:firebirdsql:embedded:C:\DesenvolvimentoJava\firebird_embedded\MSEV.fdb</jdbc.url>
+				<jdbc.url>jdbc:firebirdsql:embedded:C:\DesenvolvimentoJava\Jaybird-2.2.3JDK_1.6\MSEV.fdb</jdbc.url>
 				<jrebel.dir.class>C:/Users/renatob.silva/git/MSEV_ext/target/classes</jrebel.dir.class>
 				<jrebel.dir.testclass>C:/Users/renatob.silva/git/MSEV_ext/target/test-classes</jrebel.dir.testclass>
 			</properties>						

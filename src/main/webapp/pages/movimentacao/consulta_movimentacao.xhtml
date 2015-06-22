@@ -37,10 +37,10 @@
 				    				<div class="span4 alert alert-info">
 				    					<span>Total de Saídas: #{movimentacaoController.totalGeralDeSaidas}</span>
 				    				</div>
-				    				<h:panelGroup styleClass="span4 alert alert-success" rendered="#{movimentacaoController.ehMaiorQueZero(movimentacaoController.totalGeralDeEntradas)}">
+				    				<h:panelGroup styleClass="span4 alert alert-success" rendered="#{movimentacaoController.ehMaiorQueZero(movimentacaoController.saldoTotal)}">
 				    					<span>Saldo Total: #{movimentacaoController.saldoTotal}</span>
 				    				</h:panelGroup>
-				    				<h:panelGroup styleClass="span4 alert alert-error" rendered="#{movimentacaoController.ehMenorQueZero(movimentacaoController.totalGeralDeEntradas)}">
+				    				<h:panelGroup styleClass="span4 alert alert-error" rendered="#{movimentacaoController.ehMenorQueZero(movimentacaoController.saldoTotal)}">
 				    					<span>Saldo Total: #{movimentacaoController.saldoTotal}</span>
 				    				</h:panelGroup>
 				    				<div class="row-fluid">

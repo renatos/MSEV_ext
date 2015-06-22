@@ -1,43 +1,0 @@
-10
-
-dir
-24
-https://otaner.googlecode.com/svn/trunk/MSEV_ext/src/main/webapp
-https://otaner.googlecode.com/svn
-
-
-
-2012-09-03T22:30:09.891196Z
-23
-renato.otaner@gmail.com
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-91494cf0-c637-0410-aeb9-5bb3c8c2ae6b
-
-META-INF
-dir
-
-WEB-INF
-dir
-
-pages
-dir
-
-resources
-dir
-
-template
-dir
-
